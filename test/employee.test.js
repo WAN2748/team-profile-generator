@@ -1,1 +1,1 @@
-const Employee = 
+const Employee = require()
