@@ -1,5 +1,3 @@
-const Employee = require("./lib/employee");
+const Employees = require('./lib/employee');
 
-const employee = new Employee();
-
-employee.view();
+const employees = new Employees("Employee Profile")

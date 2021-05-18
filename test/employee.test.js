@@ -1,1 +1,5 @@
-const Employee = require()
+const Employee = require("../lib/employee");
+
+describe("Employee class", () => {
+    describe("")
+})
