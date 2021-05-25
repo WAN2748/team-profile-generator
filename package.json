@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node index",
     "watch": "nodemon index",
-    "test": "jest"
+    "test": "jest --verbose test/*"
   },
   "repository": {
     "type": "git",
