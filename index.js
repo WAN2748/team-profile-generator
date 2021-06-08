@@ -52,13 +52,36 @@ addEmployee = () => {
 ])
 
         .then = ({ name, role, id, email }) => {
-            let roleInfo;
+            let roleInfo = "";
             if (role === "Engineer") {
-                roleInfo = "GitHub username";
+                inquirer.prompt([
+                    {
+                    message: "Enter Github username",
+                    name: "GitHubUserName",
+                    type: input
+                    }
+                ])
+                roleInfo = "GitHubUserName";
+                
             } else if (role === "Intern") {
-                roleInfo = "School Name";
+                inquirer.prompt([
+                    {
+                    name: "schoolName",
+                    type: input,
+                    message: "Enter school name",
+                    
+                    }
+                ])
+                roleInfo = "SchoolName";
             } else {
                 roleInfo = "Office Phone Number";
+                inquirer.prompt([
+                    {
+                    message: "Enter offic number",
+                    name: "OfficePhoneNumber",
+                    type: input
+                    }
+                ])
             }
             inquirer.prompt([
                 {
