@@ -106,7 +106,7 @@ const addEmployee = () => {
         });
 };
 
- generateHTML = (anwser) => {
+ generateHTML = (answer) => {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -123,9 +123,9 @@ const addEmployee = () => {
     <h1 class="display-4">Team Members</h1>
     <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">${anwser.name}</h5>
+    <h5 class="card-title">${answer.name}</h5>
     <ul class="list-group">
-    <li class="list-group-item">Employee ID: ${anwser.id}</li>
+    <li class="list-group-item">Employee ID: ${answer.id}</li>
     <li class="list-group-item">Email: ${answer.email}</li>
   </ul>
   </div>
@@ -133,7 +133,7 @@ const addEmployee = () => {
     <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
     <ul class="list-group">
       <li class="list-group-item">My GitHub username is ${answer.github}</li>
-      <li class="list-group-item">LinkedIn: ${answers.officeNumber}</li>
+      <li class="list-group-item">LinkedIn: ${answer.officeNumber}</li>
     </ul>
   </div>
 </div>
@@ -144,7 +144,7 @@ const addEmployee = () => {
 
 const init = () => {
     addEmployee()
-      .then((answers) => writeFileAsync('index.html', generateHTML(answers)))
+      .then((answer) => writeFileAsync('index.html', generateHTML(answer)))
       .then(() => console.log('Successfully wrote to index.html'))
       .catch((err) => console.error(err));
   };
